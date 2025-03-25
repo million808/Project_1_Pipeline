@@ -1,6 +1,6 @@
 ## Project Purpose
 
-This pipeline was created by **Max Balter** as part of a computational protein discovery project. The goal is to reduce the ~200 mi$
+This pipeline was created by Max Balter as part of a computational protein discovery project. 
 
 ## Overview of the Pipeline
 
