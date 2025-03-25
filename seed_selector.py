@@ -13,7 +13,7 @@ import requests      # I use requests to download the AlphaFold PDB model of the
 # This file should have been written by 01_api_download_sequence.py
 seed_id_file = "query_seed_accession.txt"  # This is where I expect to find the UniProt accession of the seed.
 if not os.path.exists(seed_id_file):
-    sys.exit("❌ Error: Could not find 'query_seed_accession.txt'. Make sure you ran the Foldseek pipeline first.")
+    sys.exit("❌ Error: Could not find 'query_seed_accession.txt'.")
 
 # === STEP 2: Read UniProt accession from seed file ===
 # I load the UniProt accession from the previous step (e.g., A0A0E9XQA6)
@@ -56,7 +56,7 @@ with open(config_path, 'r') as f:
 # I update the seed protein path in the config to match the new seed structure.
 config["seed_protein_file"] = seed_structure_path
 
-# As a default, I update the active site to a placeholder. You may override this later.
+# As a default, I update the active site to a placeholder. 
 config["active_site"] = "1,2,3"
 print(f"✅ Auto-set active_site: {config['active_site']}")
 
