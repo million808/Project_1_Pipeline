@@ -7,8 +7,8 @@ This pipeline was created by **Max Balter** as part of a computational protein d
 ### 1. `01_foldseek_download_uncharacterized_pipeline.py`
 This script:
 - Accepts a PDB ID, UniProt accession, or local PDB file.
-- Submits it to the **Foldseek Web API** across all major databases (`afdb50`, `afdb-swissprot`, `afdb-proteome`, `mgnify_esm30`, `$
-- Filters Foldseek results for only hits labeled as **"uncharacterized protein"**.
+- Submits it to the Foldseek Web API across all major databases (`afdb50`, `afdb-swissprot`, `afdb-proteome`, `mgnify_esm30`, `$
+- Filters Foldseek results for only hits labeled as "uncharacterized protein".
 - Outputs a filtered `uncharacterized_hits.txt` file.
 - Also writes a seed UniProt accession to `query_seed_accession.txt`.
 
@@ -25,7 +25,7 @@ This script:
 - Downloads all corresponding AlphaFold models to a `../structures` directory.
 - Writes those accessions to `test.txt` (which ActSeek uses in batch mode).
 - Ensures the seed structure exists from the previous step.
-- Executes ActSeek in **batch mode** using the parameters in `config.json`.
+- Executes ActSeek in batch mode using the parameters in `config.json`.
 - Outputs results to `../results/actseek_results.txt`.
 
 ---
